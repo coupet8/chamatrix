@@ -17,7 +17,7 @@ from django.urls import path
 from new_client import views
 
 urlpatterns = [
-    path('', views.index, name='home'),
-    path('send', views.send),
+    path("", views.index),
+    path("postuser/", views.postuser),
     path('generate', views.generate),
 ]

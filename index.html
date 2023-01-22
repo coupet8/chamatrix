@@ -14,21 +14,22 @@
 <body>
 	<div id="wrapper">
 		<header><a href="/"><img src="images/logo.png" width="150" alt="Cha Matrix logo"></a></header>
-		<nav></nav>
+
 		<div id="heading"></div>
 		<aside></aside>
 		<section></section>
 	</div>
 	<footer></footer>
-	<form name="form" action="#" method="post" action="postuser/">
-		<p>Введите имя: <input type="text" name="q" placeholder="Имя"></p>
-		<p>Введите фамилию: <input type="text" name="q" placeholder="Фамилия"></p>
-		<p>Введите email: <input type="email" name="q" placeholder="email"></p>
-		<p>Введите дату рождения: <input type="date" name="q" placeholder="Дата рождения"></p>
+	<form name="form" method="post" action="postuser/">
+		{% csrf_token %}
+		<p>Введите имя: <input type="text" name="first_name" placeholder="Имя"></p>
+		<p>Введите фамилию: <input type="text" name="last_name" placeholder="Фамилия"></p>
+		<p>Введите email: <input type="email" name="email" placeholder="email"></p>
+		<p>Введите дату рождения: <input type="date" name="birthday" placeholder="Дата рождения"></p>
 		<p>Выберите прогнозный год: <select name="year" id="year-select"></p>
 				<option value="2023">2023</option>
 			</select>
-		<p><button type="submit">Отправить</button></p>
+		<p><button type="submit" value="Send">Отправить</button></p>
 	</form>
 </body>
 </html>
