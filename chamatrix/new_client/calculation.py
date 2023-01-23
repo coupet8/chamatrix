@@ -1,3 +1,7 @@
+import datetime
+current_year = datetime.date.today().year
+last_year = current_year - 1
+next_year = current_year + 1
 bday = input().split('.')
 x1 = int(bday[0][0])
 x2 = int(bday[0][1])
@@ -7,4 +11,29 @@ z1 = int(bday[2][0])
 z2 = int(bday[2][1])
 z3 = int(bday[2][2])
 z4 = int(bday[2][3])
-print(x1, x2, y1, y2, z1, z2, z3, z4)
+a = x1 + x2
+b = y1 + y2
+c = z1 + z2 + z3 + z4
+d = a + b + c
+e = a + b + c + d
+z5 = int(str(last_year)[0])
+z6 = int(str(last_year)[1])
+z7 = int(str(last_year)[2])
+z8 = int(str(last_year)[3])
+z9 = int(str(next_year)[0])
+z10 = int(str(next_year)[1])
+z11 = int(str(next_year)[2])
+z12 = int(str(next_year)[3])
+y4_l = z5 + z6 + z7 + z8
+y4_n = z9 + z10 + z11 + z12
+a_l = a + y4_l
+b_l = b + y4_l
+c_l = c + y4_l
+d_l = d + y4_l
+e_l = a_l + b_l + c_l + d_l
+a_n = a + y4_n
+b_n = b + y4_n
+c_n = c + y4_n
+d_n = d + y4_n
+e_n = a_n + b_n + c_n + d_n
+print(a, b, c, d, a_l, b_l, c_l, d_l, a_n, b_n, c_n, d_n)

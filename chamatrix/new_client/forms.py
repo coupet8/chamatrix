@@ -13,3 +13,6 @@ class UserForm(forms.Form):
     email = forms.EmailField(label="Email", required=False, min_length=7, max_length=255)
     birthday = forms.DateField(widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES), label="Дата рождения")
     year = forms.ChoiceField(widget=forms.RadioSelect, choices=YEAR_CHOICES, label="Прогнозный год")
+    def __init__(self, *args, **kwargs):
+        super(UserForm, self).__init__(*args, **kwargs)
+        self.fields['first_name'].widget.attrs.update({'class': 'form-group'})

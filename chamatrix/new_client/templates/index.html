@@ -1,10 +1,11 @@
+{% load static %}
 <!doctype html>
 <html>
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>Матрица Ча</title>
-	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
 
 	<!--[if lt IE 9]>
@@ -12,15 +13,12 @@
 	<![endif]-->
 </head>
 <body>
+	<aside></aside>
+	<header><a href="index.html"><img src="{% static 'images/logo.png' %}" width="150" alt="Cha Matrix logo"></a></header>
 	<div id="wrapper">
-		<header><a href=""><img src="images/logo.png" width="150" alt="Cha Matrix logo"></a></header>
-
 		<div id="heading"></div>
-		<aside></aside>
-		<section></section>
-	</div>
-	<footer></footer>
-    <form method="POST">
+	<br>
+		<form method="POST">
         <div>
 		{% for field in form %}
 		<div class="form-group">
@@ -31,6 +29,7 @@
 		{% endfor %}
 		</div>
 	<input type="submit" name="generate" value="Отправить">
-
+	</div>
+	<footer></footer>
 </body>
 </html>
