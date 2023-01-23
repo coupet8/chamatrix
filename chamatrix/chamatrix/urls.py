@@ -15,9 +15,7 @@ Including another URLconf
 """
 from django.urls import path
 from new_client import views
-
+  
 urlpatterns = [
     path("", views.index),
-    path("postuser/", views.postuser),
-    path('generate', views.generate),
 ]

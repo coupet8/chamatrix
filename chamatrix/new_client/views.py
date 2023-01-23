@@ -1,19 +1,22 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from .forms import UserForm
+ 
 def index(request):
-    return render(request, "index.html") 
+    if request.method == "POST":
+        userform = UserForm(request.POST)
+        if userform.is_valid():
+            first_name = userform.cleaned_data["first_name"]
+            last_name = userform.cleaned_data["last_name"]
+            email = userform.cleaned_data["email"]
+            birthday = userform.cleaned_data["birthday"]
+            year = userform.cleaned_data["year"]
+        else:
+            return HttpResponse("Invalid data")
+        return HttpResponse(f"<h2>Спасибо, {first_name}! Результаты расчета матрицы и персональные рекомендации отправим на {email}</h2>")
+    else:
+        userform = UserForm()
+        return render(request, "index.html", {"form": userform})
 
-def postuser(request):
-    # получаем из данных запроса POST отправленные через форму данные
-    first_name = request.POST.get("first_name", "Undefined")
-    last_name = request.POST.get("last_name", "Undefined")
-    email = request.POST.get("email", "Undefined")
-    birthday = request.POST.get("birthday", "Undefined")
-    year = request.POST.get("year", 2023)
-    return HttpResponse(f"Спасибо! Мы получили данные. Расчет матрицы с персональными рекомендациями на {year} придет на Вашу почту в течение часа.")
-
-def generate(request):
-    return HttpResponse("Генерировать")
 
 
