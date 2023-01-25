@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 from .forms import UserForm
- 
-def index(request):
+
+@login_required
+def home(request):
     if request.method == "POST":
         userform = UserForm(request.POST)
         if userform.is_valid():
@@ -16,7 +18,4 @@ def index(request):
         return HttpResponse(f"<h2>Спасибо, {first_name}! Результаты расчета матрицы и персональные рекомендации отправим на {email}</h2>")
     else:
         userform = UserForm()
-        return render(request, "index.html", {"form": userform})
-
-
-
+        return render(request, "new_client/index.html", {"form": userform})
