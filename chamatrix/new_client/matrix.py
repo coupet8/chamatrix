@@ -27,6 +27,22 @@ h = sum_of_digits(c + d)
 g = sum_of_digits(b + c)
 i = sum_of_digits(a + d)
 
+#j=И, k=К, l=Л, m=М, n=Н, o=О, p=П, r=Р, s=С, t=Т, u=У, v=Ф, x=Х, z=Ц
+j = sum_of_digits(a + e)
+k = sum_of_digits(a + j)
+l = sum_of_digits(c + e)
+m = sum_of_digits(c + l)
+n = sum_of_digits(b + e)
+o = sum_of_digits(d + e)
+p = sum_of_digits(b + n)
+r = sum_of_digits(d + o)
+s = sum_of_digits(c + d)
+t = sum_of_digits(m + r)
+u = sum_of_digits(l + o)
+v = sum_of_digits(j + n)
+x = sum_of_digits(k + p)
+z = sum_of_digits(a + b)
+
 #А-Д = a-f
 af1 = sum_of_digits(a + f)
 af2 = sum_of_digits(a + af1)
@@ -36,7 +52,6 @@ af5 = sum_of_digits(af1 + af3)
 af6 = sum_of_digits(a + af2)
 af7 = sum_of_digits(f + af3)
 a_f = [af6, af2, af4, af1, af5, af3, af7]
-
 
 #Д-Б = f-b
 fb1 = sum_of_digits(f + b)
