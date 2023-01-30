@@ -123,6 +123,13 @@ ia6 = sum_of_digits(i + ia2)
 ia7 = sum_of_digits(a + ia3)
 i_a = [ia6, ia2, ia4, ia1, ia5, ia3, ia7]
 
+
+matrix_a_i = [a, b, c, d, e, f, g, h, i]
+matrix_j_r = [j, k, l, m, n, o, p, r]
+matrix_s_z = [s, t, u, v, x, z]
+matrix_4 = [a_f, f_b, b_g, g_c, c_h, h_d, d_i, i_a]
+
+
 y4_l = sum_of_digits(last_year)
 y4_n = sum_of_digits(next_year)
 
@@ -137,5 +144,3 @@ b_n = sum_of_digits(b + y4_n)
 c_n = sum_of_digits(c + y4_n)
 d_n = sum_of_digits(d + y4_n)
 e_n = sum_of_digits(a_n + b_n + c_n + d_n)
-
-print(a_f, f_b, b_g, g_c, c_h, h_d, d_i, i_a)
