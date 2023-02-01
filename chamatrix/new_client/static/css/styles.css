@@ -11,6 +11,11 @@ header {
 	background-color: rgba(239,208,2,0.5);
 }
 
+h2.form-name {
+	text-align: center;
+	margin: auto;
+}
+
 input[type="text"] {
 	background-color: #f3f3f3;
 	border: 1px solid #e7e7e7;
@@ -63,16 +68,39 @@ header {
 	color: rgb(0, 0, 0);
 	background-color: #efd002;
 	border: none;
+	border-radius: 5px;
 	height: 32px;
-	font-family: 'Oswald', sans-serif;
+	width: 75%;
+	font-family: 'Tahoma', sans-serif;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 .content-section {
 	background: #ffffff;
-	padding: 20px 20px;
+	padding: 40px 20px;
 	border: 1px solid #dddddd;
 	border-radius: 10px;
 	margin-bottom: 30px;
 	max-width: 480px;
 	margin: auto;
 }
+
+fieldset.form-group {
+	border: none;
+}
+
+.textinput.textInput.form-control {
+	background-color: #ffffff;
+	border: 1px solid #989898;
+	border-radius: 3px;
+	width: 75%;
+	height: 25px;
+	padding: 0px 0px;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+
