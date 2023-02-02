@@ -15,6 +15,7 @@
 	<![endif]-->
 </head>
 <body>
+    <header><a href="/home"><img src="{% static 'images/logo.png' %}" class='logo' width="150" alt="Cha Matrix logo"></a></header>
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
@@ -24,7 +25,7 @@
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Войти</button>
+                <button class="btn btn-outline-info" type="submit">ВОЙТИ</button>
             </div>
         </form>
     </div>

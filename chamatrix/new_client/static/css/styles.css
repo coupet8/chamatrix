@@ -1,6 +1,6 @@
 body {
 	color: #000000;
-	font: 16px Tahoma, sans-serif;
+	font: 16px Helvetica, sans-serif;
 	background-image: url('../images/background.jpg');
 	background-color: #faf3d5;
 	border-top: 5px solid #7e7e7e;
@@ -8,12 +8,18 @@ body {
 }
 
 header {
+	display: -ms-inline-flexbox;
+	padding: 10px 0;
 	background-color: rgba(239,208,2,0.5);
+	padding: 0px;
 }
 
-h2.form-name {
-	text-align: center;
-	margin: auto;
+.logo {
+	flex: 2;
+}
+
+a[type=exit] {
+	flex: 1;
 }
 
 input[type="text"] {
@@ -29,7 +35,7 @@ input[type=submit] {
 	background-color: #efd002;
 	border: none;
 	height: 32px;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	margin: 0 auto;
 	display: block;
 }
@@ -37,22 +43,7 @@ input[type=submit] {
 p {
 	margin: 20px 0;
 }
-#wrapper {
-	background: #ffffff;
-	padding: 10px 20px;
-	border: 1spx solid #dddddd;
-	border-radius: 10px;
-	margin-bottom: 20px;
-	max-width: 480px;
-	margin: auto;
-}
-#wrapper #heading {
-	text-align: center;
-}
 
-header {
-	padding: 10px 0;
-}
 .form__line {
 	display: flex;
 	justify-content: flex-end;
@@ -65,39 +56,63 @@ header {
 }
 
 .btn.btn-outline-info {
-	color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	font: 12px 'Helvetica', sans-serif;
+	font-weight: bold;
 	background-color: #efd002;
 	border: none;
-	border-radius: 5px;
-	height: 32px;
-	width: 75%;
-	font-family: 'Tahoma', sans-serif;
+	border-radius: 20px;
+	padding: 0px;
+	height: 35px;
+	width: 30%;
 	display: block;
 	margin-left: auto;
     margin-right: auto;
 }
 
 .content-section {
-	background: #ffffff;
-	padding: 40px 20px;
-	border: 1px solid #dddddd;
+	color: #ffffff;
+	background: #575757ea;
+	padding: 20px;
 	border-radius: 10px;
 	margin-bottom: 30px;
-	max-width: 480px;
+	width: 30%;
+	height: 400px;
 	margin: auto;
+	margin-top: 10%;
+}
+
+h2.form-name {
+	text-align: center;
+	margin: auto;
+	padding: 0 0 40px;
 }
 
 fieldset.form-group {
 	border: none;
+	padding: 0px 0px 30px;
+}
+
+#div_id_username.form-group {
+	margin: auto;
+	padding: 0px 0px 50px;
+}
+
+#div_id_password.form-group {
+	margin: auto;
+	padding: 0px 0px 50px;
+}
+
+label.requiredField {
+	margin-left: 12%;
 }
 
 .textinput.textInput.form-control {
 	background-color: #ffffff;
-	border: 1px solid #989898;
-	border-radius: 3px;
+	border-radius: 5px;
 	width: 75%;
-	height: 25px;
-	padding: 0px 0px;
+	height: 30px;
+	padding: 0px;
 	display: block;
 	margin-left: auto;
     margin-right: auto;

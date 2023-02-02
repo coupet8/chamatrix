@@ -13,11 +13,11 @@
 	<![endif]-->
 </head>
 <body>
-	<header><a href="/home"><img src="{% static 'images/logo.png' %}" width="150" alt="Cha Matrix logo"></a>
+	<header><a href="/home"><img src="{% static 'images/logo.png' %}" class='logo' width="150" alt="Cha Matrix logo"></a>
 	<a href="{% url 'logout' %}" type="exit">Выход</a>
 	</header>
-	<div id="wrapper">
-		<div id="heading">Введите данные о клиенте</div>
+	<div class="content-section">
+		<h2 class="form-name">Введите данные о клиенте</h2>
 	<br>
 		<form method="POST">
 		{% csrf_token %}
@@ -31,7 +31,7 @@
 		{% endfor %}
 		</div>
 		<br>
-		<input type="submit" name="generate" value="Отправить">
+		<input class="btn btn-outline-info" type="submit" name="generate" value="Рассчитать">
 	</div>
 	<footer></footer>
 </body>
