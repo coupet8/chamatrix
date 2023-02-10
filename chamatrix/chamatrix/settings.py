@@ -127,7 +127,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#django-crispy-forms
+# https://django-crispy-forms.readthedocs.io/en/latest/install.html
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# CRISPY_TEMPLATE_PACK = 'uni_form'
+
+#End django-crispy-forms
 
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
