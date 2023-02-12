@@ -36,36 +36,42 @@ b_n = str((read_single_row(matrix.b_n))[10])
 e_n = str((read_single_row(matrix.e_n))[5])
 
 document = docx.Document("your_matrix_template.docx")
- 
+
 for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ c_l_intro }", str(c_l_intro))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ c_l_tasks }", str(c_l_tasks))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ d_l_task }", str(d_l_task))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ d_l_minus }", str(d_l_minus))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ d_l_results }", str(d_l_results)) 
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ e_l }", str(e_l))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ c_n_intro }", str(c_n_intro))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ c_n_tasks }", str(c_n_tasks))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ d_n_task }", str(d_n_task))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ d_n_intro }", str(d_n_intro))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ d_n_plus }", str(d_n_plus))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ d_n_conclusion }", str(d_n_conclusion))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ a_n }", str(a_n))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ b_n }", str(b_n))
-for paragraph in document.paragraphs:
-    paragraph.text = paragraph.text.replace("{ e_n }", str(e_n))
+    if '{ c_l_intro }' in paragraph.text:
+        inline = paragraph.runs
+        for i in range(len(inline)):
+            if '{ c_l_intro }' in inline[i].text:
+                text = inline[i].text.replace('{ c_l_intro }', str(c_l_intro))
+                inline[i].text = text
+
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace('{ c_l_tasks }', str(c_l_tasks))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ d_l_task }", str(d_l_task))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ d_l_minus }", str(d_l_minus))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ d_l_results }", str(d_l_results)) 
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ e_l }", str(e_l))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ c_n_intro }", str(c_n_intro))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ c_n_tasks }", str(c_n_tasks))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ d_n_task }", str(d_n_task))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ d_n_intro }", str(d_n_intro))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ d_n_plus }", str(d_n_plus))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ d_n_conclusion }", str(d_n_conclusion))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ a_n }", str(a_n))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ b_n }", str(b_n))
+#for paragraph in document.paragraphs:
+    #paragraph.text = paragraph.text.replace("{ e_n }", str(e_n))
 
 document.save("your_matrix_1.docx")
