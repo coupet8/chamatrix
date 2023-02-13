@@ -35,15 +35,15 @@ a_n = str((read_single_row(matrix.a_n))[9])
 b_n = str((read_single_row(matrix.b_n))[10])
 e_n = str((read_single_row(matrix.e_n))[5])
 
-document = docx.Document("your_matrix_template.docx")
-
-for paragraph in document.paragraphs:
-    if '{ c_l_intro }' in paragraph.text:
-        inline = paragraph.runs
-        for i in range(len(inline)):
-            if '{ c_l_intro }' in inline[i].text:
-                text = inline[i].text.replace('{ c_l_intro }', str(c_l_intro))
-                inline[i].text = text
+def replace_string(filename):
+    document = docx.Document(filename)
+    for paragraph in document.paragraphs:
+        if '{ c_l_intro }' in paragraph.text:
+            inline = paragraph.runs
+            for i in range(len(inline)):
+                if '{ c_l_intro }' in inline[i].text:
+                    text = inline[i].text.replace("{ c_l_intro }", str(c_l_intro))
+                    inline[i].text = text
 
 #for paragraph in document.paragraphs:
     #paragraph.text = paragraph.text.replace('{ c_l_tasks }', str(c_l_tasks))
@@ -74,4 +74,6 @@ for paragraph in document.paragraphs:
 #for paragraph in document.paragraphs:
     #paragraph.text = paragraph.text.replace("{ e_n }", str(e_n))
 
-document.save("your_matrix_1.docx")
+    document.save("your_matrix_1.docx")
+    return 1
+replace_string("your_matrix_template.docx")
