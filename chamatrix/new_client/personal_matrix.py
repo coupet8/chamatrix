@@ -1,6 +1,8 @@
 import sqlite3
 import docx
+from docx.shared import Inches
 import matrix
+import add_text
 
 def read_single_row(matrix_id):
     try:
@@ -56,4 +58,14 @@ replace_text("{ d_n_conclusion }", str(d_n_conclusion))
 replace_text("{ a_n }", str(a_n))
 replace_text("{ b_n }", str(b_n))
 replace_text("{ e_n }", str(e_n))
+
+add_text.add_text('static/images/matrix2_1.png')
+
+for paragraph in document.paragraphs:
+    if '{ your_picture }' in paragraph.text:
+        run = paragraph.runs[1]
+        run.text = ""
+        image = run.add_picture('matrix_with_text.png', width=Inches(6))
+        break
+
 document.save("your_matrix_1.docx")
