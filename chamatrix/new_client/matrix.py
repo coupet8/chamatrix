@@ -17,7 +17,7 @@ def sum_of_digits(num):
 #a=А, b=Б, c=В, d=Г, e=Я
 a = sum_of_digits(int(bday[0]))
 b = sum_of_digits(int(bday[1]))
-c = sum_of_digits(int(bday[2]))
+c = sum_of_digits(sum_of_digits(int(bday[2])))
 d = sum_of_digits(a + b + c)
 e = sum_of_digits(a + b + c + d)
 
@@ -144,5 +144,3 @@ b_n = sum_of_digits(b + y4_n)
 c_n = sum_of_digits(c + y4_n)
 d_n = sum_of_digits(d + y4_n)
 e_n = sum_of_digits(a_n + b_n + c_n + d_n)
-
-print(c)
