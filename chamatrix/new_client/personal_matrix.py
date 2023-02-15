@@ -4,6 +4,7 @@ from docx.shared import Inches
 import matrix
 import add_text
 
+
 def read_single_row(matrix_id):
     try:
         sqlite_connection = sqlite3.connect('db_matrix.db')
@@ -63,7 +64,8 @@ add_text.add_text('static/images/matrix2_1.png')
 
 for paragraph in document.paragraphs:
     if '{ your_picture }' in paragraph.text:
-        run = paragraph.runs[1]
+        paragraph.clear()
+        run = paragraph.add_run()
         run.text = ""
         image = run.add_picture('matrix_with_text.png', width=Inches(6))
         break
