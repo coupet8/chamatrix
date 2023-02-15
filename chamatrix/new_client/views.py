@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .forms import UserForm
+from new_client import personal_matrix
+
+def download(request):
+    return render(request, "new_client/index.html")
 
 @login_required
 def home(request):
