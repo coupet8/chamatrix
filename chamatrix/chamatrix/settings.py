@@ -57,7 +57,7 @@ ROOT_URLCONF = 'chamatrix.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['new_client'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
