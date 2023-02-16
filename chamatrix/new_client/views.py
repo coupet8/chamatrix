@@ -4,8 +4,7 @@ import subprocess
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .forms import UserForm
-import personal_matrix
-import matrix
+
 
 @login_required
 def index(self, request):
@@ -23,7 +22,7 @@ def index(self, request):
             firstname = userform.cleaned_data.get("first_name")
             lastname = userform.cleaned_data.get("last_name")
             emailvalue = userform.cleaned_data.get("email")
-            day_of_birth = userform.cleanrd_data.get("birthday")
+            day_of_birth = userform.cleaned_data.get("birthday")
             yearvalue = userform.cleaned_data.get("year")
         else:
             return HttpResponse("Введите корректные данные")
