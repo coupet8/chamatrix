@@ -19,7 +19,7 @@
 	<div class="content-section">
 		<h2 class="form-name">Введите данные о клиенте</h2>
 	<br>
-		<form method="POST" action="download/">
+		<form action="" method="POST">
 		{% csrf_token %}
         <div>
 		{% for field in form %}
@@ -31,7 +31,7 @@
 		{% endfor %}
 		</div>
 		<br>
-		<input class="btn btn-outline-info" type="submit" name="generate" value="Рассчитать">-->
+		<input class="btn btn-outline-info" type="submit" name="generate" value="Рассчитать">
 		</form>
 	</div>
 	<footer></footer>

@@ -1,4 +1,5 @@
 import datetime
+import views
 next_year = datetime.date.today().year
 last_year = next_year - 1
 
