@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from new_client import views
 from users import views as user_views
-from .views import IndexView
+from new_client.views import IndexView
 
   
 urlpatterns = [
