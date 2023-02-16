@@ -18,8 +18,12 @@ def home(request):
             birthday = userform.cleaned_data["birthday"]
             year = userform.cleaned_data["year"]
         else:
-            return HttpResponse("Invalid data")
-        return HttpResponse(f"<h2>Спасибо, {first_name}! Результаты расчета матрицы и персональные рекомендации отправим на {email}</h2>")
+            return HttpResponse("Введите корректные данные")
+#        return HttpResponse(f"<h2>Спасибо, {first_name}! Результаты расчета матрицы и персональные рекомендации отправим на {email}</h2>")
     else:
         userform = UserForm()
+<<<<<<< HEAD
         return render(request, "new_client/index.html", {"form": userform})
+=======
+    return render(request, "new_client/index.html", {"form": userform})
+>>>>>>> d524391e00205e85ff5da892ef7627dfb722aefa
