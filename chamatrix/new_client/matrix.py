@@ -1,9 +1,9 @@
 import datetime
-from views import index
+
 next_year = datetime.date.today().year
 last_year = next_year - 1
 
-bday = day_of_birth
+bday = input().split('.')
 
 def sum_of_digits(num):
     if num > 22:
@@ -145,3 +145,5 @@ b_n = sum_of_digits(b + y4_n)
 c_n = sum_of_digits(c + y4_n)
 d_n = sum_of_digits(d + y4_n)
 e_n = sum_of_digits(a_n + b_n + c_n + d_n)
+
+print(c)

@@ -21,7 +21,7 @@ def index(self, request):
         if userform.is_valid():
             firstname = userform.cleaned_data.get("first_name")
             lastname = userform.cleaned_data.get("last_name")
-            emailvalue = userform.cleaned_data.get("email")
+            #emailvalue = userform.cleaned_data.get("email")
             day_of_birth = userform.cleaned_data.get("birthday")
             yearvalue = userform.cleaned_data.get("year")
         else:
