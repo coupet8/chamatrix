@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Матрица Ча</title>
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header><a href="/home"><img src="{% static 'images/logo.png' %}" class='logo' width="150" alt="Cha Matrix logo"></a>
+	<a href="{% url 'logout' %}" type="exit">Выход</a>
+	</header>
+	<div class="content-section">
+		<h2 class="form-name">Нажмите, чтобы скачать выполненный расчет</h2>
+	<br>
+	<input class="btn btn-outline-info" type="submit" name="download" value="Скачать">
+	</div>
+	<footer></footer>
+</body>
+</html>
